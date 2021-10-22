@@ -1,0 +1,11 @@
+arch: arm64
+os: linux
+
+services:
+  - docker
+
+script:
+  - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+  - docker build -t $DOCKER_USERNAME/mattermost:latest -t $DOCKER_USERNAME/mattermost:v6.0.1 .
+  - docker push $DOCKER_USERNAME/mattermost:latest
+  - docker push $DOCKER_USERNAME/mattermost:v6.0.1
