@@ -4,8 +4,8 @@ FROM --platform=arm64 rockylinux/rockylinux:8
 ENV PATH="/opt/mattermost/bin:${PATH}"
 ARG PUID=2000
 ARG PGID=2000
-ARG MM_PACKAGE_NAME="mattermost-v6.0.1-linux-arm64.tar.gz"
-ARG MM_PACKAGE="https://github.com/SmartHoneybee/ubiquitous-memory/releases/download/v6.0.1/mattermost-v6.0.1-linux-arm64.tar.gz"
+ARG MM_PACKAGE_NAME="mattermost-v6.0.2-linux-arm64.tar.gz"
+ARG MM_PACKAGE="https://github.com/SmartHoneybee/ubiquitous-memory/releases/download/v6.0.2/mattermost-v6.0.2-linux-arm64.tar.gz"
 
 # Install some needed packages
 RUN sed -i 's|enabled=0|enabled=1|g' /etc/yum.repos.d/{Rocky-Extras.repo,Rocky-Plus.repo,Rocky-PowerTools.repo} \
