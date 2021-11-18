@@ -4,8 +4,11 @@ os: linux
 services:
   - docker
 
+env:
+  - MM_VERSION="v6.0.2"
+
 script:
   - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
-  - docker build --build-arg MM_VERSION="v6.0.1" -t $DOCKER_USERNAME/mattermost:latest -t $DOCKER_USERNAME/mattermost:v6.0.1 .
+  - docker build --build-arg MM_VERSION="${MM_VERSION}" -t $DOCKER_USERNAME/mattermost:latest -t $DOCKER_USERNAME/mattermost:${MM_VERSION} .
   - docker push $DOCKER_USERNAME/mattermost:latest
-  - docker push $DOCKER_USERNAME/mattermost:v6.0.1
+  - docker push $DOCKER_USERNAME/mattermost:${MM_VERSION}
