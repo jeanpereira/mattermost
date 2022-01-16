@@ -5,7 +5,7 @@ services:
   - docker
 
 env:
-  - MM_VERSION="v6.0.2"
+  - MM_VERSION="v6.3.0"
 
 script:
   - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
