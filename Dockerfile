@@ -1,4 +1,4 @@
-FROM --platform=arm64 rockylinux/rockylinux:8
+FROM --platform=arm64 rockylinux:8
 
 # Some ENV variables
 ENV PATH="/opt/mattermost/bin:${PATH}"
