@@ -6,7 +6,8 @@ ARG PUID=2000
 ARG PGID=2000
 ARG MM_VERSION
 ARG MM_PACKAGE_NAME="mattermost-${MM_VERSION}-linux-arm64.tar.gz"
-ARG MM_PACKAGE="https://github.com/SmartHoneybee/ubiquitous-memory/releases/download/${MM_VERSION}/mattermost-${MM_VERSION}-linux-arm64.tar.gz"
+#ARG MM_PACKAGE="https://github.com/SmartHoneybee/ubiquitous-memory/releases/download/${MM_VERSION}/mattermost-${MM_VERSION}-linux-arm64.tar.gz"
+ARG MM_PACKAGE="https://github.com/remiheens/mattermost-docker-arm/releases/download/${MM_VERSION}/mattermost-${MM_VERSION}-linux-arm64.tar.gz"
 
 # Install some needed packages
 RUN sed -i 's|enabled=0|enabled=1|g' /etc/yum.repos.d/{Rocky-Extras.repo,Rocky-Plus.repo,Rocky-PowerTools.repo} \
